@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nature & Aventure - Le Magazine</title>
+  <meta name="description" content="Magazine en ligne sur le camping, la randonnee et les voyages nature." />
+  <link rel="icon" href="data:," />
+  <link rel="preload" as="image" href="images/hero-banniere.jpg" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <header class="entete" id="entete">
+    <div class="entete-interieur">
+      <div class="logo">
+        <span class="logo-texte">Nature & Aventure</span>
+      </div>
+      <nav class="navigation" aria-label="Navigation principale">
+        <a href="index.html" class="lien-actif">Accueil</a>
+        <a href="pages/camping.html">Camping</a>
+        <a href="pages/randonnee.html">Randonnee</a>
+        <a href="pages/voyages.html">Voyages</a>
+        <a href="pages/equipement.html">Equipement</a>
+        <a href="pages/conseils.html">Conseils</a>
+        <a href="pages/destinations.html">Destinations</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <!-- Vue accueil : affichée par défaut -->
+    <div id="vue-accueil">
+
+      <section class="banniere">
+        <div class="banniere-contenu">
+          <p class="sous-titre">Bienvenue dans le magazine</p>
+          <h1>Explorez la Nature</h1>
+          <p class="description-banniere">
+            Camping, randonnee, voyages sauvages — vivez l'aventure a travers nos articles.
+          </p>
+          <a href="pages/camping.html" class="bouton-principal">Commencer la lecture</a>
+        </div>
+      </section>
+
+      <!-- Carrousel d'images -->
+      <section class="contenu-principal" aria-labelledby="titre-carrousel">
+        <h2 class="titre-section" id="titre-carrousel">À la Une</h2>
+
+        <div class="carrousel" id="carrousel">
+          <div class="carrousel-diapo actif">
+            <img loading="lazy" src="images/voyage-nature.jpg" alt="Paysage naturel epoustouflant" />
+            <p class="carrousel-legende">Top 5 des voyages nature en Europe</p>
+          </div>
+          <div class="carrousel-diapo">
+            <img loading="lazy" src="images/randonnee-foret.jpg" alt="Randonneur dans une foret verdoyante" />
+            <p class="carrousel-legende">Les sentiers secrets de la foret</p>
+          </div>
+          <div class="carrousel-diapo">
+            <img loading="lazy" src="images/destinations.jpg" alt="Belle destination naturelle" />
+            <p class="carrousel-legende">Les plus beaux parcs nationaux du monde</p>
+          </div>
+          <div class="carrousel-diapo">
+            <img loading="lazy" src="images/feu-de-camp.jpg" alt="Feu de camp au bord d'un lac" />
+            <p class="carrousel-legende">Un feu de camp en toute securite</p>
+          </div>
+
+          <button type="button" class="carrousel-bouton precedent" id="btn-precedent" aria-label="Image precedente">&#10094;</button>
+          <button type="button" class="carrousel-bouton suivant" id="btn-suivant" aria-label="Image suivante">&#10095;</button>
+          <div class="carrousel-points" id="carrousel-points"></div>
+        </div>
+      </section>
+
+      <!-- Grille des articles -->
+      <section class="contenu-principal" aria-labelledby="titre-articles">
+        <h2 class="titre-section" id="titre-articles">Nos Derniers Articles</h2>
+
+        <div class="grille-articles">
+
+          <article class="carte">
+            <div class="carte-image">
+              <img loading="lazy" src="images/camping-montagne.jpg" alt="Tente au bord d'un lac de montagne" />
+              <span class="categorie">Camping</span>
+            </div>
+            <div class="carte-texte">
+              <h3>Camper en Altitude : Guide Complet</h3>
+              <p>Decouvrez les meilleurs spots de camping en montagne et nos conseils pour passer une nuit sous les etoiles.</p>
+              <div class="carte-bas">
+                <a href="pages/camping.html" class="lien-article">Lire l'article</a>
+                <button type="button" class="bouton-like" data-article="camping" data-likes="24" aria-pressed="false">♥ <span>24</span></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="carte">
+            <div class="carte-image">
+              <img loading="lazy" src="images/randonnee-foret.jpg" alt="Randonneur dans une foret verdoyante" />
+              <span class="categorie">Randonnee</span>
+            </div>
+            <div class="carte-texte">
+              <h3>Randonnee en Foret : Les Sentiers Secrets</h3>
+              <p>Partez a la decouverte de sentiers caches a travers des forets denses et mysterieuses.</p>
+              <div class="carte-bas">
+                <a href="pages/randonnee.html" class="lien-article">Lire l'article</a>
+                <button type="button" class="bouton-like" data-article="randonnee" data-likes="18" aria-pressed="false">♥ <span>18</span></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="carte">
+            <div class="carte-image">
+              <img loading="lazy" src="images/voyage-nature.jpg" alt="Paysage naturel epoustouflant" />
+              <span class="categorie">Voyages</span>
+            </div>
+            <div class="carte-texte">
+              <h3>Top 5 des Voyages Nature en Europe</h3>
+              <p>Des fjords norvegiens aux forets irlandaises, voici les plus beaux voyages nature du continent.</p>
+              <div class="carte-bas">
+                <a href="pages/voyages.html" class="lien-article">Lire l'article</a>
+                <button type="button" class="bouton-like" data-article="voyages" data-likes="31" aria-pressed="false">♥ <span>31</span></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="carte">
+            <div class="carte-image">
+              <img loading="lazy" src="images/equipement.jpg" alt="Equipement de camping sur le sol" />
+              <span class="categorie">Equipement</span>
+            </div>
+            <div class="carte-texte">
+              <h3>Le Sac a Dos Ideal pour la Randonnee</h3>
+              <p>Quel equipement emporter ? Notre guide complet pour ne rien oublier avant de partir en aventure.</p>
+              <div class="carte-bas">
+                <a href="pages/equipement.html" class="lien-article">Lire l'article</a>
+                <button type="button" class="bouton-like" data-article="equipement" data-likes="12" aria-pressed="false">♥ <span>12</span></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="carte">
+            <div class="carte-image">
+              <img loading="lazy" src="images/feu-de-camp.jpg" alt="Feu de camp au bord d'un lac" />
+              <span class="categorie">Conseils</span>
+            </div>
+            <div class="carte-texte">
+              <h3>Comment Faire un Feu de Camp en Securite</h3>
+              <p>Apprenez les techniques de base pour allumer et entretenir un feu de camp en toute securite.</p>
+              <div class="carte-bas">
+                <a href="pages/conseils.html" class="lien-article">Lire l'article</a>
+                <button type="button" class="bouton-like" data-article="conseils" data-likes="9" aria-pressed="false">♥ <span>9</span></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="carte">
+            <div class="carte-image">
+              <img loading="lazy" src="images/destinations.jpg" alt="Belle destination naturelle" />
+              <span class="categorie">Destinations</span>
+            </div>
+            <div class="carte-texte">
+              <h3>Les Plus Beaux Parcs Nationaux du Monde</h3>
+              <p>Yellowstone, Torres del Paine, Patagonie... Partez a la rencontre des merveilles naturelles de notre planete.</p>
+              <div class="carte-bas">
+                <a href="pages/destinations.html" class="lien-article">Lire l'article</a>
+                <button type="button" class="bouton-like" data-article="destinations" data-likes="27" aria-pressed="false">♥ <span>27</span></button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Témoignages automatiques -->
+      <section class="temoignages" aria-labelledby="titre-temoignages">
+        <h2 class="titre-section" id="titre-temoignages">Ils nous lisent</h2>
+        <div class="temoignages-liste" id="temoignages">
+          <figure class="temoignage actif">
+            <blockquote><p>« Grace a vos conseils, j'ai fait mon premier bivouac en montagne sans aucun souci ! »</p></blockquote>
+            <figcaption>Sarra, Sousse</figcaption>
+          </figure>
+          <figure class="temoignage">
+            <blockquote><p>« Des articles clairs et de superbes photos. Mon magazine prefere pour preparer mes randonnees. »</p></blockquote>
+            <figcaption>Youssef, Tunis</figcaption>
+          </figure>
+          <figure class="temoignage">
+            <blockquote><p>« La liste d'equipement m'a evite d'oublier l'essentiel. Merci Nature &amp; Aventure ! »</p></blockquote>
+            <figcaption>Amira, Monastir</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Formulaire newsletter -->
+      <section class="contenu-principal" aria-labelledby="titre-newsletter">
+        <h2 class="titre-section" id="titre-newsletter">Newsletter</h2>
+        <form class="formulaire" id="formulaire" novalidate>
+          <p>Recevez nos nouveaux articles chaque semaine.</p>
+
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="nom" autocomplete="name" />
+          <p class="erreur" id="erreur-nom" aria-live="polite"></p>
+
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" autocomplete="email" />
+          <p class="erreur" id="erreur-email" aria-live="polite"></p>
+
+          <button type="submit" class="bouton-principal">S'inscrire</button>
+          <p class="confirmation" id="confirmation" aria-live="polite"></p>
+        </form>
+      </section>
+
+    </div>
+
+    <!-- Vue article : remplie par JavaScript avec fetch -->
+    <div id="vue-article" hidden></div>
+
+  </main>
+
+  <footer class="pied-de-page">
+    <p>2024 Nature & Aventure Magazine</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
